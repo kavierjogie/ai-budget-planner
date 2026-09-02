@@ -1,0 +1,36 @@
+declare module 'lucide-react' {
+  export const Wallet: any;
+  export const Eye: any;
+  export const EyeOff: any;
+  export const CheckCircle: any;
+  export const Plus: any;
+  export const Pencil: any;
+  export const Trash2: any;
+  export const TrendingDown: any;
+  export const RefreshCcw: any;
+  export const Filter: any;
+  export const Target: any;
+  export const Calendar: any;
+  export const PlusCircle: any;
+  export const History: any;
+  export const Sparkles: any;
+  export const TrendingUp: any;
+  export const PiggyBank: any;
+  export const ChevronDown: any;
+  export const ChevronUp: any;
+  export const Download: any;
+  export const RefreshCw: any;
+  export const AlertCircle: any;
+  export const Bot: any;
+  export const X: any;
+  export const Send: any;
+  export const Loader2: any;
+  export const MessageCircle: any;
+  export const LayoutDashboard: any;
+  export const Bell: any;
+  export const LogOut: any;
+  export const Menu: any;
+  export const ChevronRight: any;
+  export const CheckCheck: any;
+  export const Lightbulb: any;
+}
