@@ -9,7 +9,7 @@ A full-stack budget planning app for young adults. Track income and expenses, ge
 - **Authentication** — Sign up, log in, log out via Supabase Auth
 - **Dashboard** — Live overview of income, expenses, savings, and 6-month trends
 - **Income & Expenses** — Add, edit, delete; categorise expenses; mark recurring items
-- **AI Spending Analysis** — Powered by Groq (Llama 3.3 70B); identifies overspending patterns and gives personalised recommendations
+- **AI Spending Analysis** — Powered by Groq with model fallbacks; identifies overspending patterns and gives personalised recommendations
 - **AI Finance Chatbot** — Floating chat assistant with full access to your financial context
 - **Savings Goals** — Create goals, deposit savings, track progress with visual progress bars
 - **Recurring Expense Tracking** — Recurring items are automatically carried forward each month
@@ -27,7 +27,7 @@ A full-stack budget planning app for young adults. Track income and expenses, ge
 | Styling | Tailwind CSS |
 | Backend & Database | Supabase (PostgreSQL) |
 | Authentication | Supabase Auth |
-| AI | Groq API (Llama 3.3 70B) |
+| AI | Groq API (`openai/gpt-oss-120b`, with Qwen fallbacks) |
 | Charts | Recharts |
 | PDF | jsPDF + jspdf-autotable |
 | Deployment | Vercel |
@@ -82,7 +82,7 @@ Go to **Authentication → Providers → Email** → toggle **Confirm email** OF
 1. Go to https://console.groq.com/keys
 2. Create an API key → `GROQ_API_KEY`
 
-Groq is free to start and extremely fast. The app uses `llama-3.3-70b-versatile`.
+Groq is free to start and extremely fast. The app tries `openai/gpt-oss-120b` first, then falls back to `qwen/qwen3.6-27b` and `qwen/qwen3.8-27b`.
 
 ---
 
