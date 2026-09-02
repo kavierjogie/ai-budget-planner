@@ -8,6 +8,12 @@ import { createClient } from '@/lib/supabase/client';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 
+const ArrowLeftIcon = ({ size = 16, className = "" }: { size?: number; className?: string }) => (
+  <svg width={size} height={size} className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+  </svg>
+);
+
 export default function LoginPage() {
   const router = useRouter();
   const [form, setForm] = useState({ email: '', password: '' });
@@ -45,14 +51,25 @@ export default function LoginPage() {
       </div>
 
       <div className="relative w-full max-w-md">
+        {/* Back to Home Link */}
+        <div className="mb-6">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-slate-200 transition-colors group"
+          >
+            <ArrowLeftIcon size={16} className="group-hover:-translate-x-0.5 transition-transform" />
+            <span>Back to Home</span>
+          </Link>
+        </div>
+
         {/* Logo */}
-        <div className="mb-8 flex flex-col items-center">
-          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-600 shadow-2xl shadow-indigo-500/40">
+        <Link href="/" className="mb-8 flex flex-col items-center group cursor-pointer">
+          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-600 shadow-2xl shadow-indigo-500/40 group-hover:scale-105 group-hover:shadow-indigo-500/60 transition-all">
             <Wallet size={28} className="text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-slate-100">Welcome back</h1>
+          <h1 className="text-2xl font-bold text-slate-100 group-hover:text-white transition-colors">Welcome back</h1>
           <p className="mt-1 text-sm text-slate-500">Sign in to your BudgetAI account</p>
-        </div>
+        </Link>
 
         {/* Card */}
         <div className="rounded-2xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-sm p-8 shadow-2xl">
