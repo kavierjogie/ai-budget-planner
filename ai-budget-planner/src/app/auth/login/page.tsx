@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Wallet, Eye, EyeOff } from 'lucide-react';
+import { Logo } from '@/components/ui/Logo';
+import { Eye, EyeOff } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
@@ -64,8 +65,8 @@ export default function LoginPage() {
 
         {/* Logo */}
         <Link href="/" className="mb-8 flex flex-col items-center group cursor-pointer">
-          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-600 shadow-2xl shadow-indigo-500/40 group-hover:scale-105 group-hover:shadow-indigo-500/60 transition-all">
-            <Wallet size={28} className="text-white" />
+          <div className="mb-4">
+            <Logo iconOnly size="lg" />
           </div>
           <h1 className="text-2xl font-bold text-slate-100 group-hover:text-white transition-colors">Welcome back</h1>
           <p className="mt-1 text-sm text-slate-500">Sign in to your BudgetAI account</p>

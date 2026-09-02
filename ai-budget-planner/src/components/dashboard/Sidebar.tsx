@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
+import { Logo } from '@/components/ui/Logo';
 import {
   LayoutDashboard, TrendingUp, TrendingDown, Target, History,
-  Bell, LogOut, Menu, X, Bot, Wallet, ChevronRight
+  Bell, LogOut, Menu, X, Bot, ChevronRight
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { createClient } from '@/lib/supabase/client';
@@ -40,14 +41,8 @@ export default function Sidebar({ userName, unreadCount = 0 }: SidebarProps) {
   const NavContent = () => (
     <>
       {/* Logo */}
-      <div className="flex items-center gap-3 px-4 py-5 border-b border-slate-700/50">
-        <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 shadow-lg shadow-indigo-500/30">
-          <Wallet size={18} className="text-white" />
-        </div>
-        <div>
-          <p className="text-sm font-bold text-slate-100">BudgetAI</p>
-          <p className="text-xs text-slate-500">Smart Finance</p>
-        </div>
+      <div className="px-4 py-5 border-b border-slate-700/50">
+        <Logo subtitle="Smart Finance" size="sm" />
       </div>
 
       {/* Nav items */}
@@ -113,12 +108,9 @@ export default function Sidebar({ userName, unreadCount = 0 }: SidebarProps) {
 
       {/* Mobile header */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-4 py-3 border-b border-slate-700/50 bg-slate-900/90 backdrop-blur-sm">
-        <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600">
-            <Wallet size={15} className="text-white" />
-          </div>
-          <span className="text-sm font-bold text-slate-100">BudgetAI</span>
-        </div>
+        <Link href="/dashboard">
+          <Logo size="sm" />
+        </Link>
         <button onClick={() => setMobileOpen(!mobileOpen)} className="text-slate-400 hover:text-slate-100 p-1">
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>

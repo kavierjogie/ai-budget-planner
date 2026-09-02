@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Logo } from '@/components/ui/Logo';
 import {
   Wallet,
   TrendingUp,
@@ -110,18 +111,8 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/60 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-indigo-500 via-indigo-600 to-purple-600 p-[1px] shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-all">
-              <div className="h-full w-full bg-slate-950 rounded-[11px] flex items-center justify-center">
-                <Wallet className="h-5 w-5 text-indigo-400 group-hover:text-indigo-300 transition-colors" />
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-xl font-bold tracking-tight text-white font-sans">BudgetAI</span>
-              <span className="text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300">
-                PRO
-              </span>
-            </div>
+          <Link href="/" className="group cursor-pointer">
+            <Logo showBadge size="md" />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -922,10 +913,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded-lg bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center">
-              <Wallet className="h-4 h-4 text-indigo-400" />
-            </div>
-            <span className="text-base font-bold text-white tracking-tight">BudgetAI</span>
+            <Logo size="sm" />
             <span className="text-xs text-slate-400">© 2026 BudgetAI Technologies Inc.</span>
           </div>
 
