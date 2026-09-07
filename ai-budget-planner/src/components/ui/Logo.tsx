@@ -12,7 +12,7 @@ export function LogoMark({ className = "w-6 h-6", size, variant = 'brand' }: Log
 
   return (
     <Image
-      src="/assets/budgetai-logo.png"
+      src="/assets/budgetai-mark.png"
       alt=""
       width={size ?? 24}
       height={size ?? 24}
@@ -42,36 +42,42 @@ export function Logo({
 }: LogoProps) {
   const sizeMap = {
     sm: {
-      imageWidth: 96,
-      imageHeight: 96,
+      imageWidth: 56,
+      imageHeight: 69,
+      markSize: 40,
       subtext: "text-[10px]",
     },
     md: {
-      imageWidth: 116,
-      imageHeight: 116,
+      imageWidth: 68,
+      imageHeight: 84,
+      markSize: 48,
       subtext: "text-xs",
     },
     lg: {
-      imageWidth: 148,
-      imageHeight: 148,
+      imageWidth: 84,
+      imageHeight: 104,
+      markSize: 64,
       subtext: "text-sm",
     },
   };
 
   const currentSize = sizeMap[size];
-  void iconOnly;
   void variant;
 
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      <Image
-        src="/assets/budgetai-logo.png"
-        alt="BudgetAI"
-        width={currentSize.imageWidth}
-        height={currentSize.imageHeight}
-        className="h-auto w-auto max-w-full object-contain"
-        priority={size !== 'sm'}
-      />
+      {iconOnly ? (
+        <LogoMark size={currentSize.markSize} className="shrink-0 object-contain" />
+      ) : (
+        <Image
+          src="/assets/budgetai-logo.png"
+          alt="BudgetAI"
+          width={currentSize.imageWidth}
+          height={currentSize.imageHeight}
+          className="h-auto w-auto max-w-full object-contain"
+          priority={size !== 'sm'}
+        />
+      )}
 
       {(showBadge || subtitle) && (
         <div className="flex flex-col justify-center">

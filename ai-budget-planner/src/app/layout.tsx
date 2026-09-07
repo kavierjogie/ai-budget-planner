@@ -5,9 +5,12 @@ export const metadata: Metadata = {
   title: 'BudgetAI — Smart Finance for Young Adults',
   description: 'AI-powered budget planner that helps you track income, manage expenses, and reach your savings goals.',
   icons: {
-    icon: '/assets/budgetai-logo.png',
-    shortcut: '/assets/budgetai-logo.png',
-    apple: '/assets/budgetai-logo.png',
+    icon: [
+      { url: '/assets/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/assets/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    shortcut: '/assets/favicon-32x32.png',
+    apple: '/assets/apple-touch-icon.png',
   },
 };
 
