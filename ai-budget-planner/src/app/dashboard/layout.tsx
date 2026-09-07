@@ -24,7 +24,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
   const userName = profile?.full_name || user.email?.split('@')[0] || 'User';
 
   return (
-    <div className="flex min-h-screen bg-slate-950">
+    <div className="flex min-h-screen bg-[#f3f6f9]">
       <Sidebar userName={userName} unreadCount={unreadCount || 0} />
       <main className="flex-1 min-w-0 md:pt-0 pt-14">
         {children}

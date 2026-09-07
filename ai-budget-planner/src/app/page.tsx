@@ -90,12 +90,11 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<'income' | 'expenses' | 'goals'>('income');
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-indigo-500/30 selection:text-indigo-200 relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#f3f6f9] text-[#2f4157] selection:bg-[#c7d9e5] selection:text-[#2f4157] relative overflow-x-hidden">
       {/* Slow subtle ambient background lighting movement */}
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-        <div className="absolute -top-[300px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] rounded-full bg-gradient-to-br from-indigo-900/20 via-purple-900/15 to-transparent blur-[140px] animate-ambient-glow" />
-        <div className="absolute top-[40%] -right-[200px] w-[600px] h-[600px] rounded-full bg-indigo-900/10 blur-[130px] animate-slow-pulse" />
-        <div className="absolute top-[75%] -left-[200px] w-[700px] h-[700px] rounded-full bg-purple-950/15 blur-[150px] animate-ambient-glow" />
+        <div className="absolute -top-[300px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] rounded-full bg-[#e3ecf2] opacity-70 blur-[140px] animate-ambient-glow" />
+        <div className="absolute top-[40%] -right-[200px] w-[600px] h-[600px] rounded-full bg-[#c7d9e5] opacity-40 blur-[130px] animate-slow-pulse" />
       </div>
 
       {/* Grid Pattern Overlay */}
@@ -108,7 +107,7 @@ export default function Home() {
       />
 
       {/* Header / Navigation Bar */}
-      <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/60 transition-all duration-300">
+      <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/90 border-b border-[#c7d9e5] transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="group cursor-pointer">
@@ -116,35 +115,35 @@ export default function Home() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-            <a href="#showcase" className="hover:text-slate-100 transition-colors">Dashboard</a>
-            <a href="#goals" className="hover:text-slate-100 transition-colors">Savings Goals</a>
-            <a href="#insights" className="hover:text-slate-100 transition-colors">Spending Insights</a>
-            <a href="#reports" className="hover:text-slate-100 transition-colors">PDF Reports</a>
-            <a href="#trust" className="hover:text-slate-100 transition-colors">Security</a>
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#567c8e]">
+            <a href="#showcase" className="hover:text-[#2f4157] transition-colors">Dashboard</a>
+            <a href="#goals" className="hover:text-[#2f4157] transition-colors">Savings Goals</a>
+            <a href="#insights" className="hover:text-[#2f4157] transition-colors">Spending Insights</a>
+            <a href="#reports" className="hover:text-[#2f4157] transition-colors">PDF Reports</a>
+            <a href="#trust" className="hover:text-[#2f4157] transition-colors">Security</a>
           </nav>
 
           {/* CTAs */}
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/auth/login"
-              className="text-sm font-medium text-slate-300 hover:text-white px-4 py-2 rounded-lg transition-colors hover:bg-slate-900/60"
+              className="text-sm font-medium text-[#567c8e] hover:text-[#2f4157] px-4 py-2 rounded-lg transition-colors hover:bg-[#e3ecf2]"
             >
               Log In
             </Link>
             <Link
               href="/auth/signup"
-              className="group relative text-sm font-semibold text-white px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 shadow-md shadow-indigo-600/20 hover:shadow-lg hover:shadow-indigo-600/35 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center gap-2 overflow-hidden"
+              className="group relative text-sm font-semibold text-white px-5 py-2.5 rounded-xl bg-[#2f4157] shadow-md shadow-[#2f4157]/20 hover:bg-[#567c8e] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center gap-2 overflow-hidden"
             >
               <span>Get Started</span>
-              <ArrowRightIcon className="w-4 h-4 text-indigo-200 group-hover:translate-x-0.5 transition-transform" />
+              <ArrowRightIcon className="w-4 h-4 text-[#c7d9e5] group-hover:translate-x-0.5 transition-transform" />
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-slate-400 hover:text-white p-2 rounded-lg bg-slate-900/50 border border-slate-800"
+            className="md:hidden text-[#567c8e] hover:text-[#2f4157] p-2 rounded-lg bg-[#e3ecf2] border border-[#c7d9e5]"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -170,7 +169,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/auth/signup"
-                className="w-full text-center text-sm font-semibold text-white py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg shadow-indigo-600/30"
+                className="w-full text-center text-sm font-semibold text-white py-3 rounded-xl bg-[#2f4157] shadow-lg shadow-[#2f4157]/25"
               >
                 Get Started
               </Link>
@@ -210,7 +209,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
                   <Link
                     href="/auth/signup"
-                    className="group px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-purple-600 text-white font-semibold text-base shadow-xl shadow-indigo-600/25 hover:shadow-2xl hover:shadow-indigo-600/40 hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 flex items-center justify-center gap-3"
+                    className="group px-8 py-4 rounded-xl bg-[#2f4157] hover:bg-[#567c8e] text-white font-semibold text-base shadow-xl shadow-[#2f4157]/25 hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 flex items-center justify-center gap-3"
                   >
                     <span>Get Started</span>
                     <ArrowRightIcon className="w-5 h-5 text-indigo-100 group-hover:translate-x-1 transition-transform" />
@@ -269,19 +268,19 @@ export default function Home() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                     <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
                       <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">Total Net Position</span>
-                      <div className="text-2xl font-bold text-white mt-1 font-sans">R128,450.00</div>
+                      <div className="text-2xl font-bold text-[#2f4157] mt-1 font-sans">R128 450</div>
                       <div className="flex items-center gap-1.5 mt-2 text-xs font-semibold text-emerald-400">
                         <ArrowUpRightIcon className="w-3.5 h-3.5" />
-                        <span>+R12,340.00 (+10.6%)</span>
+                        <span>+R12 340 (+10.6%)</span>
                         <span className="text-slate-500 font-normal">this month</span>
                       </div>
                     </div>
 
                     <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
                       <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">Monthly Surplus</span>
-                      <div className="text-2xl font-bold text-indigo-300 mt-1 font-sans">R4,850.00</div>
+                        <div className="text-2xl font-bold text-[#2f4157] mt-1 font-sans">R4 850</div>
                       <div className="w-full bg-slate-800 h-1.5 rounded-full mt-3 overflow-hidden">
-                        <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-full w-[72%] rounded-full" />
+                        <div className="bg-[#567c8e] h-full w-[72%] rounded-full" />
                       </div>
                     </div>
                   </div>
@@ -339,7 +338,7 @@ export default function Home() {
                           <div className="text-slate-500">Income • Direct Deposit</div>
                         </div>
                       </div>
-                        <span className="font-mono font-semibold text-emerald-400">+R6,500.00</span>
+                        <span className="font-mono font-semibold text-emerald-400">+R6 500</span>
                     </div>
 
                     <div className="flex items-center justify-between p-3 rounded-lg bg-slate-900/60 border border-slate-800/80 text-xs">
@@ -352,7 +351,7 @@ export default function Home() {
                           <div className="text-slate-500">Savings • Investment</div>
                         </div>
                       </div>
-                        <span className="font-mono font-semibold text-slate-300">-R1,500.00</span>
+                        <span className="font-mono font-semibold text-slate-300">-R1 500</span>
                     </div>
                   </div>
 
@@ -516,15 +515,15 @@ export default function Home() {
                       <div className="grid grid-cols-3 gap-4 text-center">
                         <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
                           <div className="text-[11px] text-slate-400">Primary Salary</div>
-                          <div className="text-base font-bold text-white mt-1">R9,500.00</div>
+                          <div className="text-base font-bold text-[#2f4157] mt-1">R9 500</div>
                         </div>
                         <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
                           <div className="text-[11px] text-slate-400">Consulting</div>
-                          <div className="text-base font-bold text-emerald-400 mt-1">+R2,400.00</div>
+                          <div className="text-base font-bold text-emerald-400 mt-1">+R2 400</div>
                         </div>
                         <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
                           <div className="text-[11px] text-slate-400">Dividends</div>
-                          <div className="text-base font-bold text-indigo-300 mt-1">+R850.00</div>
+                          <div className="text-base font-bold text-indigo-300 mt-1">+R850</div>
                         </div>
                       </div>
                     )}
@@ -549,7 +548,7 @@ export default function Home() {
                       <div className="flex items-center justify-between p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-xs">
                         <div>
                           <div className="font-semibold text-white">Emergency Capital Fund</div>
-                          <div className="text-slate-400 text-[11px]">Target: R30,000.00 • Completion: Q4 2026</div>
+                          <div className="text-slate-400 text-[11px]">Target: R30 000 • Completion: Q4 2026</div>
                         </div>
                         <div className="text-right">
                           <div className="font-mono font-bold text-emerald-400 text-sm">R27,400</div>
@@ -629,8 +628,8 @@ export default function Home() {
                       <div className="bg-emerald-400 h-full w-full" />
                     </div>
                     <div className="flex justify-between text-xs text-slate-400 font-mono">
-                      <span>Saved: R30,000.00</span>
-                      <span>Target: R30,000.00</span>
+                      <span>Saved: R30 000</span>
+                      <span>Target: R30 000</span>
                     </div>
                   </div>
 
@@ -651,11 +650,11 @@ export default function Home() {
                       </span>
                     </div>
                     <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden mb-2">
-                      <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-full w-[84.5%]" />
+                      <div className="bg-[#567c8e] h-full w-[84.5%]" />
                     </div>
                     <div className="flex justify-between text-xs text-slate-400 font-mono">
-                      <span>Saved: R84,500.00</span>
-                      <span>Target: R100,000.00</span>
+                      <span>Saved: R84 500</span>
+                      <span>Target: R100 000</span>
                     </div>
                   </div>
 
@@ -807,15 +806,15 @@ export default function Home() {
                     <div className="grid grid-cols-3 gap-4 p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-xs">
                       <div>
                         <span className="text-slate-500">Gross Inflow</span>
-                        <div className="text-sm font-bold font-mono text-white mt-0.5">R18,450.00</div>
+                        <div className="text-sm font-bold font-mono text-white mt-0.5">R18 450</div>
                       </div>
                       <div>
                         <span className="text-slate-500">Total Outflow</span>
-                        <div className="text-sm font-bold font-mono text-slate-300 mt-0.5">R7,620.00</div>
+                        <div className="text-sm font-bold font-mono text-slate-300 mt-0.5">R7 620</div>
                       </div>
                       <div>
                         <span className="text-slate-500">Net Surplus</span>
-                        <div className="text-sm font-bold font-mono text-emerald-400 mt-0.5">+R10,830.00</div>
+                        <div className="text-sm font-bold font-mono text-emerald-400 mt-0.5">+R10 830</div>
                       </div>
                     </div>
 
@@ -827,19 +826,19 @@ export default function Home() {
                       </div>
                       <div className="flex justify-between py-1.5 text-slate-300">
                         <span>Primary Income (Consulting)</span>
-                        <span className="font-mono text-white">R14,000.00</span>
+                        <span className="font-mono text-white">R14 000</span>
                       </div>
                       <div className="flex justify-between py-1.5 text-slate-300">
                         <span>Investment Dividends</span>
-                        <span className="font-mono text-white">R4,450.00</span>
+                        <span className="font-mono text-white">R4 450</span>
                       </div>
                       <div className="flex justify-between py-1.5 text-slate-300">
                         <span>Housing & Fixed Costs</span>
-                        <span className="font-mono text-slate-400">-R4,200.00</span>
+                        <span className="font-mono text-slate-400">-R4 200</span>
                       </div>
                       <div className="flex justify-between py-1.5 text-slate-300">
                         <span>Discretionary Lifestyle</span>
-                        <span className="font-mono text-slate-400">-R3,420.00</span>
+                        <span className="font-mono text-slate-400">-R3 420</span>
                       </div>
                     </div>
 
@@ -885,7 +884,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <Link
                   href="/auth/signup"
-                  className="w-full sm:w-auto px-9 py-4 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-purple-600 text-white font-semibold text-base shadow-xl shadow-indigo-600/30 hover:shadow-2xl hover:shadow-indigo-600/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto px-9 py-4 rounded-xl bg-[#2f4157] hover:bg-[#567c8e] text-white font-semibold text-base shadow-xl shadow-[#2f4157]/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2"
                 >
                   <span>Get Started Free</span>
                   <ArrowRightIcon className="w-5 h-5" />

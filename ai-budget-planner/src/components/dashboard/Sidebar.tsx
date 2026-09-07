@@ -41,7 +41,7 @@ export default function Sidebar({ userName, unreadCount = 0 }: SidebarProps) {
   const NavContent = () => (
     <>
       {/* Logo */}
-      <div className="px-4 py-5 border-b border-slate-700/50">
+      <div className="px-4 py-5 border-b border-[#c7d9e5]">
         <Logo subtitle="Smart Finance" size="sm" />
       </div>
 
@@ -59,38 +59,38 @@ export default function Sidebar({ userName, unreadCount = 0 }: SidebarProps) {
               className={cn(
                 'group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-150',
                 active
-                  ? 'bg-indigo-600/15 text-indigo-400 shadow-sm'
-                  : 'text-slate-400 hover:bg-slate-700/50 hover:text-slate-100'
+                  ? 'bg-[#e3ecf2] text-[#2f4157] shadow-sm'
+                  : 'text-[#567c8e] hover:bg-[#e3ecf2] hover:text-[#2f4157]'
               )}
             >
-              <Icon size={17} className={active ? 'text-indigo-400' : 'text-slate-500 group-hover:text-slate-300'} />
+              <Icon size={17} className={active ? 'text-[#2f4157]' : 'text-[#567c8e] group-hover:text-[#2f4157]'} />
               <span className="flex-1">{item.label}</span>
               {isNotif && unreadCount > 0 && (
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-indigo-600 text-xs text-white font-bold">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#2f4157] text-xs text-white font-bold">
                   {unreadCount > 9 ? '9+' : unreadCount}
                 </span>
               )}
-              {active && <ChevronRight size={14} className="text-indigo-400" />}
+              {active && <ChevronRight size={14} className="text-[#567c8e]" />}
             </Link>
           );
         })}
       </nav>
 
       {/* User section */}
-      <div className="border-t border-slate-700/50 p-3 space-y-1">
+      <div className="border-t border-[#c7d9e5] p-3 space-y-1">
         <div className="flex items-center gap-3 rounded-lg px-3 py-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600/20 text-indigo-400 text-sm font-bold">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#e3ecf2] text-[#2f4157] text-sm font-bold">
             {userName?.[0]?.toUpperCase() || 'U'}
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-slate-200 truncate">{userName || 'User'}</p>
-            <p className="text-xs text-slate-500">Free plan</p>
+            <p className="text-sm font-medium text-[#2f4157] truncate">{userName || 'User'}</p>
+            <p className="text-xs text-[#567c8e]">Free plan</p>
           </div>
         </div>
         <button
           onClick={handleSignOut}
           disabled={signingOut}
-          className="w-full flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-slate-400 hover:text-red-400 hover:bg-red-500/10 transition-all duration-150 disabled:opacity-50"
+          className="w-full flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-[#567c8e] hover:text-red-600 hover:bg-red-50 transition-all duration-150 disabled:opacity-50"
         >
           <LogOut size={16} />
           <span>{signingOut ? 'Signing out...' : 'Sign out'}</span>
@@ -102,16 +102,16 @@ export default function Sidebar({ userName, unreadCount = 0 }: SidebarProps) {
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className="hidden md:flex md:w-56 lg:w-64 flex-col h-screen sticky top-0 border-r border-slate-700/50 bg-slate-900/80 backdrop-blur-sm">
+      <aside className="hidden md:flex md:w-56 lg:w-64 flex-col h-screen sticky top-0 border-r border-[#c7d9e5] bg-white backdrop-blur-sm">
         <NavContent />
       </aside>
 
       {/* Mobile header */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-4 py-3 border-b border-slate-700/50 bg-slate-900/90 backdrop-blur-sm">
+      <div className="md:hidden fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-4 py-3 border-b border-[#c7d9e5] bg-white/95 backdrop-blur-sm">
         <Link href="/dashboard">
           <Logo size="sm" />
         </Link>
-        <button onClick={() => setMobileOpen(!mobileOpen)} className="text-slate-400 hover:text-slate-100 p-1">
+        <button onClick={() => setMobileOpen(!mobileOpen)} className="text-[#567c8e] hover:text-[#2f4157] p-1">
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
@@ -119,8 +119,8 @@ export default function Sidebar({ userName, unreadCount = 0 }: SidebarProps) {
       {/* Mobile drawer */}
       {mobileOpen && (
         <div className="md:hidden fixed inset-0 z-50">
-          <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
-          <aside className="absolute left-0 top-0 bottom-0 w-72 flex flex-col bg-slate-900 border-r border-slate-700/50 shadow-2xl">
+          <div className="absolute inset-0 bg-[#2f4157]/30 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
+          <aside className="absolute left-0 top-0 bottom-0 w-72 flex flex-col bg-white border-r border-[#c7d9e5] shadow-2xl">
             <NavContent />
           </aside>
         </div>

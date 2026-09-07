@@ -80,7 +80,7 @@ export default function ChatBot() {
         onClick={() => setOpen(true)}
         className={cn(
           'fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full',
-          'bg-indigo-600 shadow-2xl shadow-indigo-500/40 hover:bg-indigo-500 transition-all duration-200',
+          'bg-[#2f4157] shadow-2xl shadow-[#2f4157]/25 hover:bg-[#567c8e] transition-all duration-200',
           'hover:scale-105 active:scale-95',
           open && 'hidden'
         )}
@@ -91,15 +91,15 @@ export default function ChatBot() {
 
       {/* Chat window */}
       {open && (
-        <div className="fixed bottom-6 right-6 z-50 flex flex-col w-80 sm:w-96 h-[520px] rounded-2xl border border-slate-700/50 bg-slate-800 shadow-2xl shadow-black/50 overflow-hidden">
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col w-80 sm:w-96 h-[520px] rounded-2xl border border-[#c7d9e5] bg-white shadow-2xl shadow-[#2f4157]/20 overflow-hidden">
           {/* Header */}
-          <div className="flex items-center gap-3 bg-indigo-600 px-4 py-3">
+          <div className="flex items-center gap-3 bg-[#2f4157] px-4 py-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20">
               <Bot size={16} className="text-white" />
             </div>
             <div className="flex-1">
               <p className="text-sm font-semibold text-white">Financial Advisor</p>
-              <p className="text-xs text-indigo-200">AI-powered • personalised to you</p>
+              <p className="text-xs text-[#c7d9e5]">AI-powered • personalised to you</p>
             </div>
             <button
               onClick={() => setOpen(false)}
@@ -117,15 +117,15 @@ export default function ChatBot() {
                 className={cn('flex', msg.role === 'user' ? 'justify-end' : 'justify-start')}
               >
                 {msg.role === 'assistant' && (
-                  <div className="mr-2 mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-indigo-600/20">
-                    <Bot size={12} className="text-indigo-400" />
+                  <div className="mr-2 mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#e3ecf2]">
+                    <Bot size={12} className="text-[#567c8e]" />
                   </div>
                 )}
                 <div className={cn(
                   'max-w-[78%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed',
                   msg.role === 'user'
-                    ? 'bg-indigo-600 text-white rounded-tr-sm'
-                    : 'bg-slate-700/60 text-slate-200 rounded-tl-sm'
+                    ? 'bg-[#2f4157] text-white rounded-tr-sm'
+                    : 'bg-[#e3ecf2] text-[#2f4157] rounded-tl-sm'
                 )}>
                   {msg.content}
                 </div>
@@ -133,11 +133,11 @@ export default function ChatBot() {
             ))}
             {loading && (
               <div className="flex justify-start">
-                <div className="mr-2 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-indigo-600/20">
-                  <Bot size={12} className="text-indigo-400" />
+                <div className="mr-2 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#e3ecf2]">
+                  <Bot size={12} className="text-[#567c8e]" />
                 </div>
-                <div className="bg-slate-700/60 rounded-2xl rounded-tl-sm px-4 py-3">
-                  <Loader2 size={16} className="animate-spin text-indigo-400" />
+                <div className="bg-[#e3ecf2] rounded-2xl rounded-tl-sm px-4 py-3">
+                  <Loader2 size={16} className="animate-spin text-[#567c8e]" />
                 </div>
               </div>
             )}

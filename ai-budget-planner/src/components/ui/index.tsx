@@ -9,11 +9,11 @@ interface BadgeProps {
 
 export function Badge({ children, variant = 'default', className }: BadgeProps) {
   const variants = {
-    default: 'bg-slate-700 text-slate-300',
-    success: 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/20',
-    warning: 'bg-amber-500/15 text-amber-400 border border-amber-500/20',
+    default: 'bg-[#e3ecf2] text-[#2f4157]',
+    success: 'bg-[#e3ecf2] text-[#567c8e] border border-[#a2c1d1]',
+    warning: 'bg-[#c7d9e5] text-[#2f4157] border border-[#a2c1d1]',
     danger: 'bg-red-500/15 text-red-400 border border-red-500/20',
-    info: 'bg-indigo-500/15 text-indigo-400 border border-indigo-500/20',
+    info: 'bg-[#e3ecf2] text-[#2f4157] border border-[#a2c1d1]',
   };
   return (
     <span className={cn('inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium', variants[variant], className)}>
@@ -32,11 +32,11 @@ interface EmptyStateProps {
 export function EmptyState({ icon, title, description, action }: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 text-center">
-      <div className="mb-4 rounded-full bg-slate-700/50 p-4 text-slate-500">
+      <div className="mb-4 rounded-full bg-[#e3ecf2] p-4 text-[#567c8e]">
         {icon}
       </div>
-      <h3 className="mb-1 text-base font-semibold text-slate-300">{title}</h3>
-      <p className="mb-6 max-w-sm text-sm text-slate-500">{description}</p>
+      <h3 className="mb-1 text-base font-semibold text-[#2f4157]">{title}</h3>
+      <p className="mb-6 max-w-sm text-sm text-[#567c8e]">{description}</p>
       {action}
     </div>
   );
@@ -51,7 +51,7 @@ export function LoadingSpinner({ size = 'md', className }: LoadingSpinnerProps) 
   const sizes = { sm: 'h-4 w-4', md: 'h-8 w-8', lg: 'h-12 w-12' };
   return (
     <div className={cn('flex items-center justify-center', className)}>
-      <svg className={cn('animate-spin text-indigo-500', sizes[size])} fill="none" viewBox="0 0 24 24">
+      <svg className={cn('animate-spin text-[#567c8e]', sizes[size])} fill="none" viewBox="0 0 24 24">
         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
       </svg>
@@ -70,13 +70,13 @@ interface StatCardProps {
 
 export function StatCard({ label, value, subtext, icon, trend, color = 'indigo' }: StatCardProps) {
   const colors = {
-    indigo: 'bg-indigo-500/10 text-indigo-400 ring-indigo-500/20',
-    emerald: 'bg-emerald-500/10 text-emerald-400 ring-emerald-500/20',
-    amber: 'bg-amber-500/10 text-amber-400 ring-amber-500/20',
+    indigo: 'bg-[#e3ecf2] text-[#2f4157] ring-[#a2c1d1]',
+    emerald: 'bg-[#e3ecf2] text-[#567c8e] ring-[#a2c1d1]',
+    amber: 'bg-[#c7d9e5] text-[#2f4157] ring-[#a2c1d1]',
     red: 'bg-red-500/10 text-red-400 ring-red-500/20',
   };
   return (
-    <div className="rounded-xl border border-slate-700/50 bg-slate-800/50 p-5">
+    <div className="rounded-xl border border-[#c7d9e5] bg-white p-5 shadow-sm shadow-[#2f4157]/5">
       <div className="flex items-start justify-between">
         <div className={cn('rounded-lg p-2.5 ring-1', colors[color])}>
           {icon}

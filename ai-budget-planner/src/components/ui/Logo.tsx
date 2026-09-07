@@ -82,7 +82,7 @@ export function Logo({
     <div className={`flex items-center gap-3 ${className}`}>
       {/* Geometric Symbol Container */}
       <div
-        className={`${currentSize.container} bg-slate-900/90 border border-slate-800/80 flex items-center justify-center shadow-lg shadow-indigo-950/20 group-hover:border-indigo-500/40 group-hover:shadow-indigo-500/20 transition-all duration-300 shrink-0`}
+        className={`${currentSize.container} bg-[#2f4157] border border-[#567c8e] flex items-center justify-center shadow-md shadow-[#2f4157]/15 group-hover:bg-[#567c8e] transition-all duration-300 shrink-0`}
       >
         <LogoMark size={currentSize.iconSize} variant={variant} />
       </div>
@@ -90,17 +90,17 @@ export function Logo({
       {!iconOnly && (
         <div className="flex flex-col justify-center">
           <div className="flex items-center gap-2">
-            <span className={`${currentSize.text} font-bold tracking-tight text-slate-100 group-hover:text-white transition-colors font-sans`}>
+            <span className={`${currentSize.text} font-bold tracking-tight text-[#2f4157] group-hover:text-[#567c8e] transition-colors font-sans`}>
               BudgetAI
             </span>
             {showBadge && (
-              <span className="text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300">
+                <span className="text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full bg-[#e3ecf2] border border-[#a2c1d1] text-[#2f4157]">
                 PRO
               </span>
             )}
           </div>
           {subtitle && (
-            <p className={`${currentSize.subtext} text-slate-500 font-medium`}>
+            <p className={`${currentSize.subtext} text-[#567c8e] font-medium`}>
               {subtitle}
             </p>
           )}

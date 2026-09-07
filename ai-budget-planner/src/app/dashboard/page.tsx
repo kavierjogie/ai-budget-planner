@@ -163,10 +163,10 @@ export default function DashboardPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-slate-100">
+          <h1 className="text-2xl font-bold text-[#2f4157]">
             Hey, {data.userName.split(' ')[0]} 👋
           </h1>
-          <p className="text-sm text-slate-500 mt-0.5">{getMonthYearLabel(monthYear)} overview</p>
+          <p className="text-sm text-[#567c8e] mt-0.5">{getMonthYearLabel(monthYear)} overview</p>
         </div>
         <div className="flex items-center gap-2 flex-wrap">
           {budgetStatus && (
@@ -186,7 +186,7 @@ export default function DashboardPage() {
       </div>
 
       {error && (
-        <div className="flex items-center gap-2 rounded-lg bg-red-500/10 border border-red-500/20 px-4 py-3 text-sm text-red-400">
+        <div className="flex items-center gap-2 rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
           <AlertCircle size={16} />
           {error}
         </div>
@@ -234,14 +234,14 @@ export default function DashboardPage() {
           <CardContent>
             {data.analysis ? (
               <div className="space-y-4">
-                <p className="text-sm text-slate-300 leading-relaxed">{data.analysis.ai_analysis}</p>
+                <p className="text-sm text-[#2f4157] leading-relaxed">{data.analysis.ai_analysis}</p>
                 {data.analysis.ai_recommendations?.length > 0 && (
                   <div>
-                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Recommendations</p>
+                    <p className="text-xs font-semibold text-[#567c8e] uppercase tracking-wide mb-2">Recommendations</p>
                     <ul className="space-y-2">
                       {data.analysis.ai_recommendations.slice(0, 3).map((rec: string, i: number) => (
-                        <li key={i} className="flex gap-2 text-sm text-slate-400">
-                          <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-indigo-500/15 text-indigo-400 text-xs font-bold">
+                        <li key={i} className="flex gap-2 text-sm text-[#567c8e]">
+                          <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#e3ecf2] text-[#2f4157] text-xs font-bold">
                             {i + 1}
                           </span>
                           {rec}
@@ -253,8 +253,8 @@ export default function DashboardPage() {
               </div>
             ) : (
               <div className="flex flex-col items-center py-8 text-center">
-                <Sparkles size={32} className="text-slate-600 mb-3" />
-                <p className="text-sm text-slate-500 mb-4">Run an AI analysis to get personalised insights about your spending habits.</p>
+                <Sparkles size={32} className="text-[#a2c1d1] mb-3" />
+                <p className="text-sm text-[#567c8e] mb-4">Run an AI analysis to get personalised insights about your spending habits.</p>
                 <Button size="sm" onClick={runAnalysis} loading={analyzing}>
                   <Sparkles size={14} />
                   Analyse My Finances
@@ -268,7 +268,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader>
             <CardTitle>Savings Goals</CardTitle>
-            <a href="/dashboard/goals" className="text-xs text-indigo-400 hover:text-indigo-300">View all →</a>
+            <a href="/dashboard/goals" className="text-xs text-[#567c8e] hover:text-[#2f4157]">View all →</a>
           </CardHeader>
           <CardContent>
             {data.savingsGoals.length > 0 ? (
@@ -278,16 +278,16 @@ export default function DashboardPage() {
                   return (
                     <div key={goal.id} className="space-y-1.5">
                       <div className="flex items-center justify-between">
-                        <p className="text-sm font-medium text-slate-200">{goal.name}</p>
-                        <p className="text-xs text-slate-500">{pct.toFixed(0)}%</p>
+                        <p className="text-sm font-medium text-[#2f4157]">{goal.name}</p>
+                        <p className="text-xs text-[#567c8e]">{pct.toFixed(0)}%</p>
                       </div>
-                      <div className="h-1.5 w-full rounded-full bg-slate-700">
+                      <div className="h-1.5 w-full rounded-full bg-[#e3ecf2]">
                         <div
-                          className="h-full rounded-full bg-emerald-500 transition-all duration-500"
+                          className="h-full rounded-full bg-[#567c8e] transition-all duration-500"
                           style={{ width: `${pct}%` }}
                         />
                       </div>
-                      <div className="flex justify-between text-xs text-slate-500">
+                      <div className="flex justify-between text-xs text-[#567c8e]">
                         <span>{formatCurrency(goal.current_amount)}</span>
                         <span>{formatCurrency(goal.target_amount)}</span>
                       </div>
@@ -297,8 +297,8 @@ export default function DashboardPage() {
               </div>
             ) : (
               <div className="flex flex-col items-center py-8 text-center">
-                <PiggyBank size={32} className="text-slate-600 mb-3" />
-                <p className="text-sm text-slate-500 mb-4">No savings goals yet. Create one to start tracking your progress.</p>
+                <PiggyBank size={32} className="text-[#a2c1d1] mb-3" />
+                <p className="text-sm text-[#567c8e] mb-4">No savings goals yet. Create one to start tracking your progress.</p>
                 <a href="/dashboard/goals">
                   <Button size="sm" variant="outline">Create a goal</Button>
                 </a>

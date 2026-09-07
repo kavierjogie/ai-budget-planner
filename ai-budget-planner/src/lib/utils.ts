@@ -7,6 +7,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatCurrency(amount: number, currency = 'ZAR'): string {
+  if (currency === 'ZAR') {
+    return `R${Math.round(amount).toLocaleString('en-ZA').replace(/,/g, ' ')}`;
+  }
   return new Intl.NumberFormat('en-ZA', {
     style: 'currency',
     currency,

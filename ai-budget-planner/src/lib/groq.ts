@@ -155,24 +155,24 @@ export async function analyzeFinances(data: {
   const prompt = `You are an expert financial advisor analyzing a user's budget. Provide a thorough, personalized analysis.
 
 Financial Data:
-- Total Income: ${data.currency} ${data.totalIncome.toFixed(2)}
-- Total Expenses: ${data.currency} ${data.totalExpenses.toFixed(2)}
-- Net Balance: ${data.currency} ${(data.totalIncome - data.totalExpenses).toFixed(2)}
+- Total Income: R ${data.totalIncome.toFixed(2)}
+- Total Expenses: R ${data.totalExpenses.toFixed(2)}
+- Net Balance: R ${(data.totalIncome - data.totalExpenses).toFixed(2)}
 - Savings Rate: ${((1 - data.totalExpenses / data.totalIncome) * 100).toFixed(1)}%
 
 Spending by Category:
 ${Object.entries(data.spendingByCategory)
   .sort(([, a], [, b]) => b - a)
-  .map(([cat, amount]) => `- ${cat}: ${data.currency} ${amount.toFixed(2)} (${((amount / data.totalIncome) * 100).toFixed(1)}% of income)`)
+  .map(([cat, amount]) => `- ${cat}: R ${amount.toFixed(2)} (${((amount / data.totalIncome) * 100).toFixed(1)}% of income)`)
   .join('\n')}
 
 Savings Goals:
 ${data.savingsGoals.length > 0
-  ? data.savingsGoals.map(g => `- ${g.name}: ${data.currency} ${g.current_amount.toFixed(2)} / ${data.currency} ${g.target_amount.toFixed(2)} (${((g.current_amount / g.target_amount) * 100).toFixed(1)}%)`).join('\n')
+  ? data.savingsGoals.map(g => `- ${g.name}: R ${g.current_amount.toFixed(2)} / R ${g.target_amount.toFixed(2)} (${((g.current_amount / g.target_amount) * 100).toFixed(1)}%)`).join('\n')
   : '- No savings goals set'}
 
 Recent Monthly Trend (last months):
-${data.monthlyTrend.slice(-3).map(m => `- ${m.month}: Income ${data.currency} ${m.income.toFixed(2)}, Expenses ${data.currency} ${m.expenses.toFixed(2)}`).join('\n')}
+${data.monthlyTrend.slice(-3).map(m => `- ${m.month}: Income R ${m.income.toFixed(2)}, Expenses R ${m.expenses.toFixed(2)}`).join('\n')}
 
 Provide a JSON response with exactly this structure:
 {
@@ -216,14 +216,14 @@ export async function chatWithFinancialAdvisor(
 You have access to the user's financial data and should provide personalized, actionable advice.
 
 User's Current Financial Summary:
-- Monthly Income: ${financialContext.currency} ${financialContext.totalIncome.toFixed(2)}
-- Monthly Expenses: ${financialContext.currency} ${financialContext.totalExpenses.toFixed(2)}
-- Available Balance: ${financialContext.currency} ${(financialContext.totalIncome - financialContext.totalExpenses).toFixed(2)}
+- Monthly Income: R ${financialContext.totalIncome.toFixed(2)}
+- Monthly Expenses: R ${financialContext.totalExpenses.toFixed(2)}
+- Available Balance: R ${(financialContext.totalIncome - financialContext.totalExpenses).toFixed(2)}
 - Budget Status: ${financialContext.budgetStatus}
 - Top Spending Categories: ${Object.entries(financialContext.spendingByCategory)
     .sort(([, a], [, b]) => b - a)
     .slice(0, 3)
-    .map(([cat, amt]) => `${cat} (${financialContext.currency} ${amt.toFixed(2)})`)
+    .map(([cat, amt]) => `${cat} (R ${amt.toFixed(2)})`)
     .join(', ')}
 - Savings Goals: ${financialContext.savingsGoals.length > 0
     ? financialContext.savingsGoals.map(g => `${g.name}: ${((g.current_amount / g.target_amount) * 100).toFixed(0)}% complete`).join(', ')
