@@ -151,7 +151,7 @@ export default function ChatBot() {
                 <button
                   key={prompt}
                   onClick={() => { setInput(prompt); inputRef.current?.focus(); }}
-                  className="rounded-full border border-slate-600/50 bg-slate-700/30 px-3 py-1 text-xs text-slate-400 hover:text-slate-200 hover:border-indigo-500/50 transition-colors"
+                  className="rounded-full border border-[#c7d9e5] bg-[#f3f6f9] px-3 py-1 text-xs text-[#4b5563] hover:text-[#2f4157] hover:border-[#567c8e] transition-colors"
                 >
                   {prompt}
                 </button>
@@ -160,7 +160,7 @@ export default function ChatBot() {
           )}
 
           {/* Input */}
-          <div className="border-t border-slate-700/50 p-3">
+          <div className="border-t border-[#c7d9e5] p-3">
             <div className="flex gap-2">
               <input
                 ref={inputRef}
@@ -168,12 +168,12 @@ export default function ChatBot() {
                 onChange={e => setInput(e.target.value)}
                 onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } }}
                 placeholder="Ask about your finances..."
-                className="flex-1 rounded-xl border border-slate-600/50 bg-slate-700/50 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="flex-1 rounded-xl border border-[#c7d9e5] bg-[#f3f6f9] px-3 py-2 text-sm text-[#17202a] placeholder:text-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#a2c1d1] focus:border-[#567c8e]"
               />
               <button
                 onClick={sendMessage}
                 disabled={!input.trim() || loading}
-                className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-[#2f4157] text-white hover:bg-[#567c8e] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 <Send size={15} />
               </button>

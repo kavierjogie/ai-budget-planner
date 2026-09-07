@@ -10,11 +10,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', loading, children, disabled, ...props }, ref) => {
     const variants = {
-      primary: 'bg-[#2f4157] hover:bg-[#567c8e] text-white shadow-lg shadow-[#2f4157]/20',
-      secondary: 'bg-[#c7d9e5] hover:bg-[#a2c1d1] text-[#2f4157]',
-      danger: 'bg-red-600/20 hover:bg-red-600/30 text-red-400 border border-red-500/30',
-      ghost: 'hover:bg-[#e3ecf2] text-[#567c8e] hover:text-[#2f4157]',
-      outline: 'border border-[#a2c1d1] hover:border-[#567c8e] text-[#2f4157] hover:text-[#2f4157] hover:bg-[#e3ecf2]',
+      primary: 'bg-[#2f4157] hover:bg-[#1f3045] text-white shadow-md shadow-[#2f4157]/15',
+      secondary: 'bg-[#567c8e] hover:bg-[#2f4157] text-white shadow-sm',
+      danger: 'bg-[#b42318] hover:bg-[#8f1c13] text-white shadow-sm',
+      ghost: 'hover:bg-[#e3ecf2] text-[#4b5563] hover:text-[#2f4157]',
+      outline: 'border border-[#a2c1d1] hover:border-[#567c8e] text-[#2f4157] hover:bg-[#e3ecf2]',
     };
 
     const sizes = {
@@ -29,7 +29,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled || loading}
         className={cn(
           'inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-150',
-          'focus:outline-none focus:ring-2 focus:ring-[#567c8e] focus:ring-offset-2 focus:ring-offset-[#f3f6f9]',
+          'focus:outline-none focus:ring-2 focus:ring-[#a2c1d1] focus:ring-offset-2 focus:ring-offset-[#f3f6f9]',
           'disabled:opacity-50 disabled:cursor-not-allowed',
           variants[variant],
           sizes[size],

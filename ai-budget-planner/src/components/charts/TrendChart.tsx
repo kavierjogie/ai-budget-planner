@@ -23,7 +23,7 @@ export default function TrendChart({ data, currency = 'ZAR' }: TrendChartProps) 
 
   if (chartData.length === 0) {
     return (
-      <div className="flex items-center justify-center h-64 text-slate-500 text-sm">
+      <div className="flex items-center justify-center h-64 text-[#4b5563] text-sm">
         No trend data yet — add income and expenses to see your history.
       </div>
     );
@@ -32,15 +32,15 @@ export default function TrendChart({ data, currency = 'ZAR' }: TrendChartProps) 
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload?.length) {
       return (
-        <div className="rounded-lg border border-slate-600/50 bg-slate-800 px-3 py-2.5 shadow-xl text-xs space-y-1">
-          <p className="font-semibold text-slate-200 mb-2">{label}</p>
+        <div className="rounded-lg border border-[#c7d9e5] bg-white px-3 py-2.5 shadow-lg text-xs space-y-1">
+          <p className="font-semibold text-[#17202a] mb-2">{label}</p>
           {payload.map((entry: any) => (
             <div key={entry.name} className="flex items-center justify-between gap-4">
               <span className="flex items-center gap-1.5">
                 <span className="h-2 w-2 rounded-full" style={{ backgroundColor: entry.fill }} />
-                <span className="text-slate-400">{entry.name}</span>
+                <span className="text-[#4b5563]">{entry.name}</span>
               </span>
-              <span className="font-medium text-slate-200">{formatCurrency(entry.value, currency)}</span>
+              <span className="font-medium text-[#17202a]">{formatCurrency(entry.value, currency)}</span>
             </div>
           ))}
         </div>
@@ -68,7 +68,7 @@ export default function TrendChart({ data, currency = 'ZAR' }: TrendChartProps) 
           />
           <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(99,102,241,0.05)' }} />
           <Legend
-            formatter={(value) => <span className="text-xs text-slate-400">{value}</span>}
+            formatter={(value) => <span className="text-xs text-[#4b5563]">{value}</span>}
             iconSize={10}
             iconType="circle"
           />

@@ -37,7 +37,7 @@ export default function SpendingChart({ data, currency = 'ZAR' }: SpendingChartP
 
   if (chartData.length === 0) {
     return (
-      <div className="flex items-center justify-center h-64 text-slate-500 text-sm">
+      <div className="flex items-center justify-center h-64 text-[#4b5563] text-sm">
         No spending data yet
       </div>
     );
@@ -46,9 +46,9 @@ export default function SpendingChart({ data, currency = 'ZAR' }: SpendingChartP
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload?.length) {
       return (
-        <div className="rounded-lg border border-slate-600/50 bg-slate-800 px-3 py-2 shadow-xl text-xs">
-          <p className="font-semibold text-slate-200">{payload[0].name}</p>
-          <p className="text-slate-400">{formatCurrency(payload[0].value, currency)}</p>
+        <div className="rounded-lg border border-[#c7d9e5] bg-white px-3 py-2 shadow-lg text-xs">
+          <p className="font-semibold text-[#17202a]">{payload[0].name}</p>
+          <p className="text-[#4b5563]">{formatCurrency(payload[0].value, currency)}</p>
         </div>
       );
     }
@@ -76,7 +76,7 @@ export default function SpendingChart({ data, currency = 'ZAR' }: SpendingChartP
           </Pie>
           <Tooltip content={<CustomTooltip />} />
           <Legend
-            formatter={(value) => <span className="text-xs text-slate-400">{value}</span>}
+            formatter={(value) => <span className="text-xs text-[#4b5563]">{value}</span>}
             iconSize={10}
             iconType="circle"
           />

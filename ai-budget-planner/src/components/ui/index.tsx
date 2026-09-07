@@ -10,9 +10,9 @@ interface BadgeProps {
 export function Badge({ children, variant = 'default', className }: BadgeProps) {
   const variants = {
     default: 'bg-[#e3ecf2] text-[#2f4157]',
-    success: 'bg-[#e3ecf2] text-[#567c8e] border border-[#a2c1d1]',
-    warning: 'bg-[#c7d9e5] text-[#2f4157] border border-[#a2c1d1]',
-    danger: 'bg-red-500/15 text-red-400 border border-red-500/20',
+    success: 'bg-[#e7f4ed] text-[#237a57] border border-[#b8ddc9]',
+    warning: 'bg-[#fff4d6] text-[#8a5a00] border border-[#f0d68b]',
+    danger: 'bg-[#fff0ee] text-[#b42318] border border-[#f1b8b2]',
     info: 'bg-[#e3ecf2] text-[#2f4157] border border-[#a2c1d1]',
   };
   return (
@@ -71,12 +71,12 @@ interface StatCardProps {
 export function StatCard({ label, value, subtext, icon, trend, color = 'indigo' }: StatCardProps) {
   const colors = {
     indigo: 'bg-[#e3ecf2] text-[#2f4157] ring-[#a2c1d1]',
-    emerald: 'bg-[#e3ecf2] text-[#567c8e] ring-[#a2c1d1]',
-    amber: 'bg-[#c7d9e5] text-[#2f4157] ring-[#a2c1d1]',
-    red: 'bg-red-500/10 text-red-400 ring-red-500/20',
+    emerald: 'bg-[#e7f4ed] text-[#237a57] ring-[#b8ddc9]',
+    amber: 'bg-[#fff4d6] text-[#8a5a00] ring-[#f0d68b]',
+    red: 'bg-[#fff0ee] text-[#b42318] ring-[#f1b8b2]',
   };
   return (
-    <div className="rounded-xl border border-[#c7d9e5] bg-white p-5 shadow-sm shadow-[#2f4157]/5">
+    <div className="rounded-xl border border-[#c7d9e5] bg-white p-5 shadow-[0_8px_24px_rgba(47,65,87,0.06)]">
       <div className="flex items-start justify-between">
         <div className={cn('rounded-lg p-2.5 ring-1', colors[color])}>
           {icon}
@@ -91,9 +91,9 @@ export function StatCard({ label, value, subtext, icon, trend, color = 'indigo' 
         )}
       </div>
       <div className="mt-4">
-        <p className="text-2xl font-bold text-slate-100">{value}</p>
-        <p className="mt-0.5 text-sm text-slate-500">{label}</p>
-        {subtext && <p className="mt-1 text-xs text-slate-600">{subtext}</p>}
+        <p className="text-2xl font-bold tracking-tight text-[#17202a]">{value}</p>
+        <p className="mt-0.5 text-sm text-[#4b5563]">{label}</p>
+        {subtext && <p className="mt-1 text-xs text-[#4b5563]">{subtext}</p>}
       </div>
     </div>
   );

@@ -159,14 +159,14 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="p-6 max-w-7xl mx-auto space-y-6">
+    <div className="mx-auto max-w-7xl space-y-7 p-4 sm:p-6 lg:p-8">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-[#2f4157]">
+          <h1 className="text-2xl font-bold tracking-tight text-[#17202a] sm:text-3xl">
             Hey, {data.userName.split(' ')[0]} 👋
           </h1>
-          <p className="text-sm text-[#567c8e] mt-0.5">{getMonthYearLabel(monthYear)} overview</p>
+          <p className="mt-1 text-sm text-[#4b5563]">{getMonthYearLabel(monthYear)} overview</p>
         </div>
         <div className="flex items-center gap-2 flex-wrap">
           {budgetStatus && (
