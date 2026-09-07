@@ -111,7 +111,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="group cursor-pointer">
-            <Logo showBadge size="md" />
+            <Logo showBadge size="sm" />
           </Link>
 
           {/* Desktop Navigation Links */}
