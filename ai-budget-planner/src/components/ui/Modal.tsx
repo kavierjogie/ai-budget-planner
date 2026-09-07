@@ -34,16 +34,16 @@ export default function Modal({ open, onClose, title, children, size = 'md' }: M
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div
-        className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+        className="absolute inset-0 bg-[#2f4157]/60 backdrop-blur-sm"
         onClick={onClose}
       />
       <div className={cn(
-        'relative w-full rounded-2xl border border-slate-700/50 bg-slate-800 shadow-2xl shadow-black/50',
+        'relative w-full rounded-2xl border border-[#c7d9e5] bg-[#f3f6f9] shadow-2xl shadow-[#2f4157]/20',
         'max-h-[90vh] overflow-y-auto',
         sizes[size]
       )}>
-        <div className="flex items-center justify-between border-b border-slate-700/50 p-5">
-          <h2 className="text-lg font-semibold text-slate-100">{title}</h2>
+        <div className="flex items-center justify-between border-b border-[#c7d9e5] p-5">
+          <h2 className="text-lg font-semibold text-[#2f4157]">{title}</h2>
           <button
             onClick={onClose}
             className="rounded-lg p-1.5 text-slate-400 hover:text-slate-100 hover:bg-slate-700/50 transition-colors"

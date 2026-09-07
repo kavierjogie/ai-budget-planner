@@ -53,18 +53,18 @@ export default function TrendChart({ data, currency = 'ZAR' }: TrendChartProps) 
     <div className="h-72">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={chartData} barGap={3} barSize={16}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#334155" vertical={false} />
+          <CartesianGrid strokeDasharray="3 3" stroke="#c7d9e5" vertical={false} />
           <XAxis
             dataKey="month"
-            tick={{ fill: '#64748b', fontSize: 11 }}
+            tick={{ fill: '#567c8e', fontSize: 11 }}
             axisLine={false}
             tickLine={false}
           />
           <YAxis
-            tick={{ fill: '#64748b', fontSize: 11 }}
+            tick={{ fill: '#567c8e', fontSize: 11 }}
             axisLine={false}
             tickLine={false}
-            tickFormatter={(v) => `${currency === 'ZAR' ? 'R' : '$'}${(v / 1000).toFixed(0)}k`}
+            tickFormatter={(v) => `R${(v / 1000).toFixed(0)}k`}
           />
           <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(99,102,241,0.05)' }} />
           <Legend
@@ -72,9 +72,9 @@ export default function TrendChart({ data, currency = 'ZAR' }: TrendChartProps) 
             iconSize={10}
             iconType="circle"
           />
-          <Bar dataKey="Income" fill="#6366f1" radius={[4, 4, 0, 0]} />
-          <Bar dataKey="Expenses" fill="#f59e0b" radius={[4, 4, 0, 0]} />
-          <Bar dataKey="Saved" fill="#10b981" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="Income" fill="#2f4157" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="Expenses" fill="#567c8e" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="Saved" fill="#a2c1d1" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

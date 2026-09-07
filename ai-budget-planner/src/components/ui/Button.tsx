@@ -10,11 +10,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', loading, children, disabled, ...props }, ref) => {
     const variants = {
-      primary: 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-500/20',
-      secondary: 'bg-slate-700 hover:bg-slate-600 text-slate-100',
+      primary: 'bg-[#2f4157] hover:bg-[#567c8e] text-white shadow-lg shadow-[#2f4157]/20',
+      secondary: 'bg-[#c7d9e5] hover:bg-[#a2c1d1] text-[#2f4157]',
       danger: 'bg-red-600/20 hover:bg-red-600/30 text-red-400 border border-red-500/30',
-      ghost: 'hover:bg-slate-700/50 text-slate-400 hover:text-slate-100',
-      outline: 'border border-slate-600 hover:border-slate-500 text-slate-300 hover:text-white hover:bg-slate-700/30',
+      ghost: 'hover:bg-[#e3ecf2] text-[#567c8e] hover:text-[#2f4157]',
+      outline: 'border border-[#a2c1d1] hover:border-[#567c8e] text-[#2f4157] hover:text-[#2f4157] hover:bg-[#e3ecf2]',
     };
 
     const sizes = {
@@ -29,7 +29,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled || loading}
         className={cn(
           'inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-150',
-          'focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-900',
+          'focus:outline-none focus:ring-2 focus:ring-[#567c8e] focus:ring-offset-2 focus:ring-offset-[#f3f6f9]',
           'disabled:opacity-50 disabled:cursor-not-allowed',
           variants[variant],
           sizes[size],

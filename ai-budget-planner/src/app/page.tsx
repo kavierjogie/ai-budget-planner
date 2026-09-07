@@ -269,17 +269,17 @@ export default function Home() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                     <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
                       <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">Total Net Position</span>
-                      <div className="text-2xl font-bold text-white mt-1 font-sans">$128,450.00</div>
+                      <div className="text-2xl font-bold text-white mt-1 font-sans">R128,450.00</div>
                       <div className="flex items-center gap-1.5 mt-2 text-xs font-semibold text-emerald-400">
                         <ArrowUpRightIcon className="w-3.5 h-3.5" />
-                        <span>+$12,340.00 (+10.6%)</span>
+                        <span>+R12,340.00 (+10.6%)</span>
                         <span className="text-slate-500 font-normal">this month</span>
                       </div>
                     </div>
 
                     <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
                       <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">Monthly Surplus</span>
-                      <div className="text-2xl font-bold text-indigo-300 mt-1 font-sans">$4,850.00</div>
+                      <div className="text-2xl font-bold text-indigo-300 mt-1 font-sans">R4,850.00</div>
                       <div className="w-full bg-slate-800 h-1.5 rounded-full mt-3 overflow-hidden">
                         <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-full w-[72%] rounded-full" />
                       </div>
@@ -302,8 +302,8 @@ export default function Home() {
                       <svg className="w-full h-full overflow-visible" viewBox="0 0 400 100" preserveAspectRatio="none">
                         <defs>
                           <linearGradient id="chartGlow" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#6366f1" stopOpacity="0.4" />
-                            <stop offset="100%" stopColor="#6366f1" stopOpacity="0.0" />
+                            <stop offset="0%" stopColor="#567c8e" stopOpacity="0.4" />
+                            <stop offset="100%" stopColor="#567c8e" stopOpacity="0.0" />
                           </linearGradient>
                         </defs>
                         <path
@@ -318,9 +318,9 @@ export default function Home() {
                           strokeLinecap="round"
                         />
                         <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-                          <stop offset="0%" stopColor="#818cf8" />
-                          <stop offset="50%" stopColor="#c084fc" />
-                          <stop offset="100%" stopColor="#38bdf8" />
+                          <stop offset="0%" stopColor="#2f4157" />
+                          <stop offset="50%" stopColor="#567c8e" />
+                          <stop offset="100%" stopColor="#a2c1d1" />
                         </linearGradient>
                       </svg>
                     </div>
@@ -339,7 +339,7 @@ export default function Home() {
                           <div className="text-slate-500">Income • Direct Deposit</div>
                         </div>
                       </div>
-                      <span className="font-mono font-semibold text-emerald-400">+$6,500.00</span>
+                        <span className="font-mono font-semibold text-emerald-400">+R6,500.00</span>
                     </div>
 
                     <div className="flex items-center justify-between p-3 rounded-lg bg-slate-900/60 border border-slate-800/80 text-xs">
@@ -352,7 +352,7 @@ export default function Home() {
                           <div className="text-slate-500">Savings • Investment</div>
                         </div>
                       </div>
-                      <span className="font-mono font-semibold text-slate-300">-$1,500.00</span>
+                        <span className="font-mono font-semibold text-slate-300">-R1,500.00</span>
                     </div>
                   </div>
 
@@ -374,7 +374,7 @@ export default function Home() {
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-slate-800/80">
               <div className="p-4 space-y-1">
-                <div className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-sans">$45M+</div>
+                <div className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-sans">R45M+</div>
                 <div className="text-xs text-slate-400 font-medium">Tracked Personal Capital</div>
               </div>
               <div className="p-4 space-y-1">
@@ -516,15 +516,15 @@ export default function Home() {
                       <div className="grid grid-cols-3 gap-4 text-center">
                         <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
                           <div className="text-[11px] text-slate-400">Primary Salary</div>
-                          <div className="text-base font-bold text-white mt-1">$9,500.00</div>
+                          <div className="text-base font-bold text-white mt-1">R9,500.00</div>
                         </div>
                         <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
                           <div className="text-[11px] text-slate-400">Consulting</div>
-                          <div className="text-base font-bold text-emerald-400 mt-1">+$2,400.00</div>
+                          <div className="text-base font-bold text-emerald-400 mt-1">+R2,400.00</div>
                         </div>
                         <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
                           <div className="text-[11px] text-slate-400">Dividends</div>
-                          <div className="text-base font-bold text-indigo-300 mt-1">+$850.00</div>
+                          <div className="text-base font-bold text-indigo-300 mt-1">+R850.00</div>
                         </div>
                       </div>
                     )}
@@ -533,7 +533,7 @@ export default function Home() {
                       <div className="space-y-2">
                         <div className="flex justify-between text-xs text-slate-300">
                           <span>Fixed Housing & Utilities</span>
-                          <span className="font-mono font-semibold">$3,200 / $3,500</span>
+                          <span className="font-mono font-semibold">R3,200 / R3,500</span>
                         </div>
                         <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
                           <div className="bg-purple-500 h-full w-[91%]" />
@@ -549,10 +549,10 @@ export default function Home() {
                       <div className="flex items-center justify-between p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-xs">
                         <div>
                           <div className="font-semibold text-white">Emergency Capital Fund</div>
-                          <div className="text-slate-400 text-[11px]">Target: $30,000.00 • Completion: Q4 2026</div>
+                          <div className="text-slate-400 text-[11px]">Target: R30,000.00 • Completion: Q4 2026</div>
                         </div>
                         <div className="text-right">
-                          <div className="font-mono font-bold text-emerald-400 text-sm">$27,400</div>
+                          <div className="font-mono font-bold text-emerald-400 text-sm">R27,400</div>
                           <div className="text-[10px] text-slate-400">91.3% Complete</div>
                         </div>
                       </div>
@@ -629,8 +629,8 @@ export default function Home() {
                       <div className="bg-emerald-400 h-full w-full" />
                     </div>
                     <div className="flex justify-between text-xs text-slate-400 font-mono">
-                      <span>Saved: $30,000.00</span>
-                      <span>Target: $30,000.00</span>
+                      <span>Saved: R30,000.00</span>
+                      <span>Target: R30,000.00</span>
                     </div>
                   </div>
 
@@ -654,8 +654,8 @@ export default function Home() {
                       <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-full w-[84.5%]" />
                     </div>
                     <div className="flex justify-between text-xs text-slate-400 font-mono">
-                      <span>Saved: $84,500.00</span>
-                      <span>Target: $100,000.00</span>
+                      <span>Saved: R84,500.00</span>
+                      <span>Target: R100,000.00</span>
                     </div>
                   </div>
 
@@ -807,15 +807,15 @@ export default function Home() {
                     <div className="grid grid-cols-3 gap-4 p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-xs">
                       <div>
                         <span className="text-slate-500">Gross Inflow</span>
-                        <div className="text-sm font-bold font-mono text-white mt-0.5">$18,450.00</div>
+                        <div className="text-sm font-bold font-mono text-white mt-0.5">R18,450.00</div>
                       </div>
                       <div>
                         <span className="text-slate-500">Total Outflow</span>
-                        <div className="text-sm font-bold font-mono text-slate-300 mt-0.5">$7,620.00</div>
+                        <div className="text-sm font-bold font-mono text-slate-300 mt-0.5">R7,620.00</div>
                       </div>
                       <div>
                         <span className="text-slate-500">Net Surplus</span>
-                        <div className="text-sm font-bold font-mono text-emerald-400 mt-0.5">+$10,830.00</div>
+                        <div className="text-sm font-bold font-mono text-emerald-400 mt-0.5">+R10,830.00</div>
                       </div>
                     </div>
 
@@ -827,19 +827,19 @@ export default function Home() {
                       </div>
                       <div className="flex justify-between py-1.5 text-slate-300">
                         <span>Primary Income (Consulting)</span>
-                        <span className="font-mono text-white">$14,000.00</span>
+                        <span className="font-mono text-white">R14,000.00</span>
                       </div>
                       <div className="flex justify-between py-1.5 text-slate-300">
                         <span>Investment Dividends</span>
-                        <span className="font-mono text-white">$4,450.00</span>
+                        <span className="font-mono text-white">R4,450.00</span>
                       </div>
                       <div className="flex justify-between py-1.5 text-slate-300">
                         <span>Housing & Fixed Costs</span>
-                        <span className="font-mono text-slate-400">-$4,200.00</span>
+                        <span className="font-mono text-slate-400">-R4,200.00</span>
                       </div>
                       <div className="flex justify-between py-1.5 text-slate-300">
                         <span>Discretionary Lifestyle</span>
-                        <span className="font-mono text-slate-400">-$3,420.00</span>
+                        <span className="font-mono text-slate-400">-R3,420.00</span>
                       </div>
                     </div>
 

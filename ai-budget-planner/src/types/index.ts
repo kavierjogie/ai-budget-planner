@@ -51,18 +51,18 @@ export type ExpenseCategory =
   | 'other';
 
 export const EXPENSE_CATEGORIES: { value: ExpenseCategory; label: string; color: string }[] = [
-  { value: 'housing', label: 'Housing', color: '#6366f1' },
-  { value: 'food', label: 'Food & Dining', color: '#f59e0b' },
-  { value: 'transport', label: 'Transport', color: '#10b981' },
-  { value: 'entertainment', label: 'Entertainment', color: '#ec4899' },
-  { value: 'healthcare', label: 'Healthcare', color: '#ef4444' },
-  { value: 'education', label: 'Education', color: '#8b5cf6' },
-  { value: 'clothing', label: 'Clothing', color: '#06b6d4' },
-  { value: 'utilities', label: 'Utilities', color: '#f97316' },
-  { value: 'savings', label: 'Savings', color: '#22c55e' },
-  { value: 'subscriptions', label: 'Subscriptions', color: '#a855f7' },
-  { value: 'personal_care', label: 'Personal Care', color: '#14b8a6' },
-  { value: 'other', label: 'Other', color: '#94a3b8' },
+  { value: 'housing', label: 'Housing', color: '#2f4157' },
+  { value: 'food', label: 'Food & Dining', color: '#567c8e' },
+  { value: 'transport', label: 'Transport', color: '#a2c1d1' },
+  { value: 'entertainment', label: 'Entertainment', color: '#c7d9e5' },
+  { value: 'healthcare', label: 'Healthcare', color: '#2f4157' },
+  { value: 'education', label: 'Education', color: '#567c8e' },
+  { value: 'clothing', label: 'Clothing', color: '#a2c1d1' },
+  { value: 'utilities', label: 'Utilities', color: '#c7d9e5' },
+  { value: 'savings', label: 'Savings', color: '#567c8e' },
+  { value: 'subscriptions', label: 'Subscriptions', color: '#a2c1d1' },
+  { value: 'personal_care', label: 'Personal Care', color: '#c7d9e5' },
+  { value: 'other', label: 'Other', color: '#567c8e' },
 ];
 
 export interface SavingsGoal {
