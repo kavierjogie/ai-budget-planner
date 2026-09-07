@@ -9,7 +9,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(({ className, glass, ...props
   <div
     ref={ref}
     className={cn(
-      'rounded-xl border border-[#c7d9e5] bg-white p-6 shadow-[0_8px_24px_rgba(47,65,87,0.06)]',
+      'rounded-xl border border-[#c7dbe0] bg-[#f8faf9] p-6 shadow-[0_8px_24px_rgba(23,50,77,0.08)]',
       glass && 'backdrop-blur-sm',
       className
     )}

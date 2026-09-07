@@ -102,12 +102,12 @@ export default function Sidebar({ userName, unreadCount = 0 }: SidebarProps) {
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className="hidden md:flex md:w-56 lg:w-64 flex-col h-screen sticky top-0 border-r border-[#c7d9e5] bg-white backdrop-blur-sm">
+      <aside className="hidden md:flex md:w-56 lg:w-64 flex-col h-screen sticky top-0 border-r border-[#c7dbe0] bg-[#f8faf9] backdrop-blur-sm">
         <NavContent />
       </aside>
 
       {/* Mobile header */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-4 py-3 border-b border-[#c7d9e5] bg-white/95 backdrop-blur-sm">
+      <div className="md:hidden fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-4 py-3 border-b border-[#c7dbe0] bg-[#f8faf9]/95 backdrop-blur-sm">
         <Link href="/dashboard">
           <Logo size="sm" />
         </Link>
@@ -120,7 +120,7 @@ export default function Sidebar({ userName, unreadCount = 0 }: SidebarProps) {
       {mobileOpen && (
         <div className="md:hidden fixed inset-0 z-50">
           <div className="absolute inset-0 bg-[#2f4157]/30 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
-          <aside className="absolute left-0 top-0 bottom-0 w-72 flex flex-col bg-white border-r border-[#c7d9e5] shadow-2xl">
+          <aside className="absolute left-0 top-0 bottom-0 w-72 flex flex-col bg-[#f8faf9] border-r border-[#c7dbe0] shadow-2xl">
             <NavContent />
           </aside>
         </div>

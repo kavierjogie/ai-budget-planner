@@ -76,7 +76,7 @@ export function StatCard({ label, value, subtext, icon, trend, color = 'indigo' 
     red: 'bg-[#fff0ee] text-[#b42318] ring-[#f1b8b2]',
   };
   return (
-    <div className="rounded-xl border border-[#c7d9e5] bg-white p-5 shadow-[0_8px_24px_rgba(47,65,87,0.06)]">
+    <div className="rounded-xl border border-[#c7dbe0] bg-[#f8faf9] p-5 shadow-[0_8px_24px_rgba(23,50,77,0.08)]">
       <div className="flex items-start justify-between">
         <div className={cn('rounded-lg p-2.5 ring-1', colors[color])}>
           {icon}

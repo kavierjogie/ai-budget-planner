@@ -90,7 +90,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<'income' | 'expenses' | 'goals'>('income');
 
   return (
-    <div className="min-h-screen bg-[#f3f6f9] text-[#2f4157] selection:bg-[#c7d9e5] selection:text-[#2f4157] relative overflow-x-hidden">
+    <div className="landing-page min-h-screen bg-[#edf3f5] text-[#17324d] selection:bg-[#c7dbe0] selection:text-[#17324d] relative overflow-x-hidden">
       {/* Slow subtle ambient background lighting movement */}
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
         <div className="absolute -top-[300px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] rounded-full bg-[#e3ecf2] opacity-70 blur-[140px] animate-ambient-glow" />

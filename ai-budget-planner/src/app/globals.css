@@ -2,14 +2,15 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #2f4157;
-  --blue: #567c8e;
-  --accent: #a2c1d1;
-  --light-surface: #e3ecf2;
-  --soft-surface: #c7d9e5;
-  --page: #f3f6f9;
-  --ink: #17202a;
-  --muted: #4b5563;
+  --navy: #17324d;
+  --blue: #285a6b;
+  --accent: #4a8293;
+  --light-surface: #e8f0f2;
+  --soft-surface: #c7dbe0;
+  --page: #edf3f5;
+  --surface: #f8faf9;
+  --ink: #172b3d;
+  --muted: #3f5968;
   --success: #237a57;
   --success-surface: #e7f4ed;
   --warning: #8a5a00;
@@ -24,7 +25,7 @@
   }
 
   body {
-    background: #f3f6f9;
+    background: var(--page);
     color: var(--ink);
     font-family: 'Avenir Next', Avenir, 'Segoe UI', sans-serif;
     line-height: 1.5;
@@ -42,12 +43,12 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #567c8e;
+    background: var(--accent);
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #2f4157;
+    background: var(--navy);
   }
 
   input[type='number']::-webkit-inner-spin-button,
@@ -57,8 +58,8 @@
   }
 
   select option {
-    background-color: #f3f6f9;
-    color: #2f4157;
+    background-color: var(--surface);
+    color: var(--navy);
   }
 }
 
@@ -68,7 +69,7 @@ body {
 
 /* Keep legacy page utilities aligned with the light finance palette. */
 .bg-slate-950 { background-color: var(--page) !important; }
-.bg-slate-900 { background-color: #ffffff !important; }
+.bg-slate-900 { background-color: var(--surface) !important; }
 .bg-slate-800 { background-color: var(--light-surface) !important; }
 .bg-slate-700 { background-color: var(--soft-surface) !important; }
 .text-slate-100, .text-slate-200 { color: var(--navy) !important; }
@@ -86,7 +87,7 @@ body {
 .text-purple-400, .text-purple-300 { color: var(--navy) !important; }
 
 [class~="bg-slate-950/80"], [class~="bg-slate-950/90"], [class~="bg-slate-950/95"] { background-color: rgba(243, 246, 249, 0.94) !important; }
-[class~="bg-slate-900/80"], [class~="bg-slate-900/90"] { background-color: rgba(255, 255, 255, 0.96) !important; }
+[class~="bg-slate-900/80"], [class~="bg-slate-900/90"] { background-color: rgba(248, 250, 249, 0.96) !important; }
 [class~="bg-slate-800/80"], [class~="bg-slate-800/90"] { background-color: rgba(227, 236, 242, 0.92) !important; }
 [class~="bg-slate-800/50"], [class~="bg-slate-800/60"] { background-color: rgba(227, 236, 242, 0.82) !important; }
 [class~="bg-slate-700/50"], [class~="bg-slate-700/60"] { background-color: rgba(199, 217, 229, 0.55) !important; }
@@ -143,7 +144,7 @@ button, a, input, select, textarea {
 }
 
 .glass-panel {
-  background: rgba(243, 246, 249, 0.88);
+  background: rgba(248, 250, 249, 0.9);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(162, 193, 209, 0.55);
@@ -158,14 +159,53 @@ button, a, input, select, textarea {
 }
 
 .text-gradient-primary {
-  background: linear-gradient(180deg, #2f4157 0%, #567c8e 60%, #a2c1d1 100%);
+  background: linear-gradient(180deg, #17324d 0%, #285a6b 60%, #4a8293 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-accent {
-  background: linear-gradient(135deg, #2f4157 0%, #a2c1d1 40%, #567c8e 100%);
+  background: linear-gradient(135deg, #17324d 0%, #4a8293 40%, #285a6b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Landing-page legacy utilities need light-surface equivalents, not dark-theme text. */
+.landing-page h1.text-white,
+.landing-page h2.text-white,
+.landing-page h3.text-white,
+.landing-page h4.text-white {
+  color: var(--navy) !important;
+}
+
+.landing-page .text-white {
+  color: var(--navy) !important;
+}
+
+.landing-page a .text-white,
+.landing-page button .text-white,
+.landing-page a.text-white,
+.landing-page button.text-white {
+  color: #ffffff !important;
+}
+
+.landing-page h1 span {
+  background: none !important;
+  color: var(--blue) !important;
+  -webkit-text-fill-color: var(--blue) !important;
+}
+
+.landing-page p.text-slate-300,
+.landing-page p.text-slate-400,
+.landing-page p.text-slate-500,
+.landing-page .text-slate-300,
+.landing-page .text-slate-400,
+.landing-page .text-slate-500 {
+  color: var(--blue) !important;
+}
+
+.landing-page nav a:hover,
+.landing-page .hover\:text-white:hover {
+  color: var(--navy) !important;
 }
 

@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans antialiased bg-[#f3f6f9] text-[#2f4157]">
+      <body className="font-sans antialiased bg-[#edf3f5] text-[#17324d]">
         {children}
       </body>
     </html>
