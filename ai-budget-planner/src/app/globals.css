@@ -3,20 +3,20 @@
 
 :root {
   --navy: #17324d;
-  --blue: #285a6b;
-  --accent: #4a8293;
-  --light-surface: #e8f0f2;
-  --soft-surface: #c7dbe0;
-  --page: #edf3f5;
-  --surface: #f8faf9;
-  --ink: #172b3d;
-  --muted: #3f5968;
-  --success: #237a57;
-  --success-surface: #e7f4ed;
-  --warning: #8a5a00;
-  --warning-surface: #fff4d6;
-  --danger: #b42318;
-  --danger-surface: #fff0ee;
+  --blue: #315d6d;
+  --accent: #417f83;
+  --light-surface: #e4edef;
+  --soft-surface: #c3d3d6;
+  --page: #eef3f4;
+  --surface: #fbfcfa;
+  --ink: #142b3d;
+  --muted: #405665;
+  --success: #176b4b;
+  --success-surface: #e4f1eb;
+  --warning: #875200;
+  --warning-surface: #fff1d2;
+  --danger: #a3231b;
+  --danger-surface: #ffefed;
 }
 
 @layer base {
@@ -73,7 +73,7 @@ body {
 .bg-slate-800 { background-color: var(--light-surface) !important; }
 .bg-slate-700 { background-color: var(--soft-surface) !important; }
 .text-slate-100, .text-slate-200 { color: var(--navy) !important; }
-.text-slate-300, .text-slate-400, .text-slate-500 { color: var(--blue) !important; }
+.text-slate-300, .text-slate-400, .text-slate-500 { color: var(--muted) !important; }
 .text-slate-600 { color: var(--blue) !important; }
 .border-slate-800, .border-slate-700, .border-slate-600 { border-color: var(--soft-surface) !important; }
 .bg-indigo-600, .bg-indigo-500 { background-color: var(--navy) !important; }
@@ -144,14 +144,14 @@ button, a, input, select, textarea {
 }
 
 .glass-panel {
-  background: rgba(248, 250, 249, 0.9);
+  background: rgba(251, 252, 250, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(162, 193, 209, 0.55);
 }
 
 .glass-panel-luxury {
-  background: linear-gradient(135deg, rgba(227, 236, 242, 0.96) 0%, rgba(199, 217, 229, 0.88) 100%);
+  background: linear-gradient(135deg, rgba(228, 237, 239, 0.96) 0%, rgba(195, 211, 214, 0.9) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(162, 193, 209, 0.7);
@@ -159,13 +159,13 @@ button, a, input, select, textarea {
 }
 
 .text-gradient-primary {
-  background: linear-gradient(180deg, #17324d 0%, #285a6b 60%, #4a8293 100%);
+  background: linear-gradient(180deg, #17324d 0%, #315d6d 60%, #417f83 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-accent {
-  background: linear-gradient(135deg, #17324d 0%, #4a8293 40%, #285a6b 100%);
+  background: linear-gradient(135deg, #17324d 0%, #417f83 40%, #315d6d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -194,7 +194,7 @@ export default function DashboardPage() {
 
       {/* Stats grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard label="Total Income" value={formatCurrency(data.totalIncome)} icon={<TrendingUp size={18} />} color="indigo" />
+        <StatCard label="Total Income" value={formatCurrency(data.totalIncome)} icon={<TrendingUp size={18} />} color="emerald" />
         <StatCard label="Total Expenses" value={formatCurrency(data.totalExpenses)} icon={<TrendingDown size={18} />} color={data.totalExpenses > data.totalIncome ? 'red' : 'amber'} />
         <StatCard label="Available" value={formatCurrency(Math.max(0, amountAvailable))} icon={<Wallet size={18} />} color={amountAvailable >= 0 ? 'emerald' : 'red'} />
         <StatCard label="Saved This Month" value={formatCurrency(Math.max(0, amountAvailable))} icon={<PiggyBank size={18} />} color="emerald" />

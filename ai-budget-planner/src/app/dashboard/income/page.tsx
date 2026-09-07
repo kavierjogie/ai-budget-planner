@@ -74,8 +74,8 @@ export default function IncomePage() {
       {/* Summary */}
       <Card>
         <div className="flex items-center gap-4">
-          <div className="rounded-xl bg-indigo-500/10 p-3 ring-1 ring-indigo-500/20">
-            <TrendingUp size={22} className="text-indigo-400" />
+          <div className="rounded-xl bg-emerald-500/10 p-3 ring-1 ring-emerald-500/20">
+            <TrendingUp size={22} className="text-emerald-400" />
           </div>
           <div>
             <p className="text-sm text-slate-500">Total income this month</p>
@@ -105,7 +105,7 @@ export default function IncomePage() {
               {income.map(item => (
                 <div key={item.id} className="flex items-center justify-between py-3.5 group">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-indigo-500/10 text-indigo-400 text-sm font-bold">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-400 text-sm font-bold">
                       {item.source[0].toUpperCase()}
                     </div>
                     <div>

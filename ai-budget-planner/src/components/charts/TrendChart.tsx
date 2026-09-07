@@ -56,25 +56,25 @@ export default function TrendChart({ data, currency = 'ZAR' }: TrendChartProps) 
           <CartesianGrid strokeDasharray="3 3" stroke="#c7d9e5" vertical={false} />
           <XAxis
             dataKey="month"
-            tick={{ fill: '#567c8e', fontSize: 11 }}
+            tick={{ fill: '#405665', fontSize: 11 }}
             axisLine={false}
             tickLine={false}
           />
           <YAxis
-            tick={{ fill: '#567c8e', fontSize: 11 }}
+            tick={{ fill: '#405665', fontSize: 11 }}
             axisLine={false}
             tickLine={false}
             tickFormatter={(v) => `R${(v / 1000).toFixed(0)}k`}
           />
-          <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(99,102,241,0.05)' }} />
+          <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(65,127,131,0.08)' }} />
           <Legend
             formatter={(value) => <span className="text-xs text-[#4b5563]">{value}</span>}
             iconSize={10}
             iconType="circle"
           />
-          <Bar dataKey="Income" fill="#2f4157" radius={[4, 4, 0, 0]} />
-          <Bar dataKey="Expenses" fill="#567c8e" radius={[4, 4, 0, 0]} />
-          <Bar dataKey="Saved" fill="#a2c1d1" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="Income" fill="#176b4b" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="Expenses" fill="#b56a32" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="Saved" fill="#23806f" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

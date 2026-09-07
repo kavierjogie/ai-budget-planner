@@ -31,7 +31,7 @@ export default function SpendingChart({ data, currency = 'ZAR' }: SpendingChartP
       return {
         name: catInfo?.label || category,
         value: amount,
-        color: catInfo?.color || '#94a3b8',
+        color: catInfo?.color || '#536b79',
       };
     });
 
