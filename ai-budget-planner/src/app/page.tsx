@@ -408,10 +408,10 @@ export default function Home() {
                 <BarChartIcon className="w-4 h-4" />
                 <span>Unified Command Center</span>
               </div>
-              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white font-sans">
+              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#17324d] font-sans">
                 Complete financial clarity in a single glance.
               </h2>
-              <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
+              <p className="text-[#405665] text-base sm:text-lg leading-relaxed">
                 Consolidate income streams, monitor recurring fixed costs, and gain complete visibility into your monthly surplus before committing funds.
               </p>
             </div>
@@ -433,9 +433,9 @@ export default function Home() {
                     <div className={`p-2.5 rounded-xl ${activeTab === 'income' ? 'bg-indigo-600 text-white' : 'bg-slate-800 text-slate-400'}`}>
                       <TrendingUp className="w-5 h-5" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white">Multi-Stream Income Tracking</h3>
+                    <h3 className="text-lg font-semibold text-[#17324d]">Multi-Stream Income Tracking</h3>
                   </div>
-                  <p className="text-sm text-slate-400 leading-relaxed pl-12">
+                  <p className="text-sm text-[#405665] leading-relaxed pl-12">
                     Log salaries, freelance payouts, dividends, and rental returns with automated frequency tagging.
                   </p>
                 </button>
@@ -452,9 +452,9 @@ export default function Home() {
                     <div className={`p-2.5 rounded-xl ${activeTab === 'expenses' ? 'bg-purple-600 text-white' : 'bg-slate-800 text-slate-400'}`}>
                       <PieChartIcon className="w-5 h-5" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white">Granular Expense Auditing</h3>
+                    <h3 className="text-lg font-semibold text-[#17324d]">Granular Expense Auditing</h3>
                   </div>
-                  <p className="text-sm text-slate-400 leading-relaxed pl-12">
+                  <p className="text-sm text-[#405665] leading-relaxed pl-12">
                     Categorize everyday transactions seamlessly, detect wasteful recurring costs, and stay under budget limits.
                   </p>
                 </button>
@@ -471,9 +471,9 @@ export default function Home() {
                     <div className={`p-2.5 rounded-xl ${activeTab === 'goals' ? 'bg-emerald-600 text-white' : 'bg-slate-800 text-slate-400'}`}>
                       <Target className="w-5 h-5" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white">Automated Goal Accumulation</h3>
+                    <h3 className="text-lg font-semibold text-[#17324d]">Automated Goal Accumulation</h3>
                   </div>
-                  <p className="text-sm text-slate-400 leading-relaxed pl-12">
+                  <p className="text-sm text-[#405665] leading-relaxed pl-12">
                     Establish target savings funds with real-time percentage completion indicators and projected reach dates.
                   </p>
                 </button>
@@ -506,23 +506,23 @@ export default function Home() {
                           {activeTab === 'goals' && 'Target Wealth Milestones'}
                         </span>
                       </div>
-                      <span className="text-xs font-mono text-indigo-300 bg-indigo-500/10 px-2.5 py-1 rounded-full border border-indigo-500/20">
+                      <span className="text-xs font-mono text-[#17324d] bg-[#e4edef] px-2.5 py-1 rounded-full border border-[#a2c1d1]">
                         Updated 2m ago
                       </span>
                     </div>
 
                     {activeTab === 'income' && (
                       <div className="grid grid-cols-3 gap-4 text-center">
-                        <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
-                          <div className="text-[11px] text-slate-400">Primary Salary</div>
+                        <div className="p-3 bg-[#e4edef] rounded-xl border border-[#a2c1d1]">
+                          <div className="text-[11px] text-[#405665]">Primary Salary</div>
                           <div className="text-base font-bold text-[#2f4157] mt-1">R9 500</div>
                         </div>
-                        <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
-                          <div className="text-[11px] text-slate-400">Consulting</div>
+                        <div className="p-3 bg-[#e4edef] rounded-xl border border-[#a2c1d1]">
+                          <div className="text-[11px] text-[#405665]">Consulting</div>
                           <div className="text-base font-bold text-emerald-400 mt-1">+R2 400</div>
                         </div>
-                        <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
-                          <div className="text-[11px] text-slate-400">Dividends</div>
+                        <div className="p-3 bg-[#e4edef] rounded-xl border border-[#a2c1d1]">
+                          <div className="text-[11px] text-[#405665]">Dividends</div>
                           <div className="text-base font-bold text-indigo-300 mt-1">+R850</div>
                         </div>
                       </div>
