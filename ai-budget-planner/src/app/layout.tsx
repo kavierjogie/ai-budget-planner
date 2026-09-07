@@ -4,6 +4,11 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'BudgetAI — Smart Finance for Young Adults',
   description: 'AI-powered budget planner that helps you track income, manage expenses, and reach your savings goals.',
+  icons: {
+    icon: '/assets/budgetai-logo.png',
+    shortcut: '/assets/budgetai-logo.png',
+    apple: '/assets/budgetai-logo.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
